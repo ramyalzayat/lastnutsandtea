@@ -9,7 +9,7 @@ default: &default
   pool: 5
   host: localhost
   username: pguser
-  password: 0500421655
+  password: 111222
   timeout: 5000
 
 development:
