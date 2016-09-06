@@ -1,0 +1,2 @@
+json.extract! profil, :id, :first_name, :last_name, :bio, :city_of_origin, :current_location, :asylum_status, :email, :facebook, :twitter, :linkedin, :instagram, :dob, :gender, :created_at, :updated_at
+json.url profil_url(profil, format: :json)

@@ -1,0 +1,26 @@
+<div class="maincontant">
+
+<h1>Listing stories</h1>
+
+<%= link_to 'New story', new_story_path %> 
+
+<body>
+  
+</body>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+  
+  <% @stories.each do |story| %>
+    <tr>
+      <td><%= story.title %></td>
+      <td><%= story.text %></td>
+      <td><%= link_to 'Show', story_path(story) %></td>
+    </tr>
+  <% end %>
+</table>
+
+</div>

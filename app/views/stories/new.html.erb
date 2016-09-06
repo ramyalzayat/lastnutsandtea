@@ -1,0 +1,54 @@
+<div class="maincontant text-center">
+<script src="stories.js" language="javascript" type="text/javascript"></script>
+<link href="/stories.scss" rel="stylesheet">
+
+<%= form_for :story,html: ({multipart: true}), url: stories_path do |f| %>
+
+<h1 class="textcolor">Be the hero of your story</h1><br><br> 
+
+
+
+  <p>
+    <%= f.label :Name, class:"textcolor" %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :Email, class:"textcolor" %><br>
+    <%= f.text_field :email %>
+  </p>
+
+<p>
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
+</p>
+
+
+  	<p>
+    <%= f.label :Date %><br>
+    <%= f.date_field :date %>
+  	</p>
+
+  
+  <p>
+    <%= f.label :mystory %><br>
+    <%= f.bootsy_area :text %>
+  </p>
+ 
+
+
+
+
+<p>
+  <%= f.submit "Submit", class: "btn btn-success"%>
+</p>
+
+
+
+
+
+
+<% end %>
+
+</div>
+

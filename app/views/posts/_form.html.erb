@@ -1,0 +1,65 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.number_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </div>
+  <div class="field">
+    <%= f.label :photos %><br>
+    <%= f.text_field :photos %>
+  </div>
+  <div class="field">
+    <%= f.label :privacy %><br>
+    <%= f.check_box :privacy %>
+  </div>
+  <div class="field">
+    <%= f.label :bus %><br>
+    <%= f.check_box :bus %>
+  </div>
+  <div class="field">
+    <%= f.label :car %><br>
+    <%= f.check_box :car %>
+  </div>
+  <div class="field">
+    <%= f.label :boat %><br>
+    <%= f.check_box :boat %>
+  </div>
+  <div class="field">
+    <%= f.label :plane %><br>
+    <%= f.check_box :plane %>
+  </div>
+  <div class="field">
+    <%= f.label :walking %><br>
+    <%= f.check_box :walking %>
+  </div>
+  <div class="field">
+    <%= f.label :train %><br>
+    <%= f.check_box :train %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

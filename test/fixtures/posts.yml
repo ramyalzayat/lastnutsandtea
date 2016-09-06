@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  location: 1
+  date: 2016-09-01 20:16:35
+  text: MyText
+  photos: 
+  privacy: false
+  bus: false
+  car: false
+  boat: false
+  plane: false
+  walking: false
+  train: false
+
+two:
+  title: MyString
+  location: 1
+  date: 2016-09-01 20:16:35
+  text: MyText
+  photos: 
+  privacy: false
+  bus: false
+  car: false
+  boat: false
+  plane: false
+  walking: false
+  train: false

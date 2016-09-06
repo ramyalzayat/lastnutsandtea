@@ -1,0 +1,46 @@
+// Place all the styles related to the stories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+h1 {
+text-align: center;
+font-family: 'Abril Fatface', cursive!important;
+
+}
+
+
+input[type=file] {
+    display: inline!important;
+}
+
+
+.maincontant {
+margin-top:100px;
+padding-bottom: 100px;	
+}
+
+
+.textareasize {
+    width: 600px;
+    height: 200px;
+}
+
+.textcolor {
+	color: #800080;
+}
+
+article
+{
+    width: 80%;
+    margin:auto;
+    margin-top:10px;
+}
+
+
+.thumbnail{
+
+    height: 100px;
+    margin: 10px;    
+}

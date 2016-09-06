@@ -1,0 +1,69 @@
+<%= form_for(@profil) do |f| %>
+  <% if @profil.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profil.errors.count, "error") %> prohibited this profil from being saved:</h2>
+
+      <ul>
+      <% @profil.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio %>
+  </div>
+  <div class="field">
+    <%= f.label :city_of_origin %><br>
+    <%= f.text_field :city_of_origin %>
+  </div>
+  <div class="field">
+    <%= f.label :current_location %><br>
+    <%= f.text_field :current_location %>
+  </div>
+  <div class="field">
+    <%= f.label :asylum_status %><br>
+    <%= f.text_field :asylum_status %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook %><br>
+    <%= f.text_field :facebook %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br>
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin %><br>
+    <%= f.text_field :linkedin %>
+  </div>
+  <div class="field">
+    <%= f.label :instagram %><br>
+    <%= f.text_field :instagram %>
+  </div>
+  <div class="field">
+    <%= f.label :dob %><br>
+    <%= f.datetime_select :dob %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
