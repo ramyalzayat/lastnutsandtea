@@ -53,7 +53,7 @@
 
 .carousel {
   height: 96vh;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -62,7 +62,7 @@
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 96vh;
+  height: 100vh;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -70,7 +70,7 @@
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 96vh
+  height: 100vh
   !important;
 }
 
@@ -108,9 +108,9 @@
 
 
 .img-circle2 {
- width:140px;
- height:140px;
- border-radius: 50%;
+ width:120px;
+ height:120px;
+ border-radius: 35%;
  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  /*position: relative;
  left: 100px;*/
@@ -154,7 +154,7 @@ h2 {
 }
 
 h2 {
-	font-size: 37px
+	font-size: 30px
 	!important;
 
 }
@@ -178,8 +178,8 @@ h2 {
 
 .row-backgroundcolor {
   background-color:#f0f5f8;
-  /*padding-top: 30px;
-  margin-top: -61px;*/
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .backgroundcolor {
@@ -202,7 +202,7 @@ h2 {
 
 p {
 	font-family: 'Aldrich', sans-serif;
-	font-size: 17px
+	font-size: 17px!important;
 }
 
 
@@ -221,11 +221,11 @@ a {
 .footercolor {
   color:#800080;
 }
-/*
+
 .slidepos {
-  margin-top: 36px;
+  padding-bottom: 17px!important;
 }
-*/
+
 
 
 
@@ -236,14 +236,14 @@ a {
   position: relative;
   height: 0em;
   width: 21.5em;
-  margin: 65px 800px;
+  margin: 3% 50%;
 }
 
 .social li {
   display: block;
   height: 4em;
   line-height: 4em;
-  margin: -2.2em;
+  margin: -2.1em;
   position: absolute;
   -webkit-transition: -webkit-transform .7s;
   -moz-transition: -moz-transform .7s;
@@ -263,15 +263,15 @@ a {
 .social a {
   color: #fffdf0;
   display: block;
-  height: 4em;
-  line-height: 6em;
+  height: 2em;
+  line-height: 7em;
   text-align: center;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  width: 4em; 
+  width: 0em; 
   
 }
 

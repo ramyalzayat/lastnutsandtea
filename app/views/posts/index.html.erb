@@ -1,11 +1,12 @@
 <div class="maincontant text-center">
-
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
+<link href="/posts.scss" rel="stylesheet">
 <p id="notice"><%= notice %></p>
 
-<h1><ins><em>All Posts</em></ins></h1>
+<h2>All Posts</h2>
 
 
-<div class="table-responsive">
+<!-- <div class="table-responsive">
 
 <table class="table table-hover">
 
@@ -14,9 +15,9 @@
     <tr class="info">
       <th>Title</th>
 <!--       <th>Location</th>
- -->  <th>Date</th>
+ ->  <th>Date</th>
       <th>Text</th>
-      <th>Photos</th>
+      <!-- <th>Photos</th> ->
       <th>Privacy</th>
       <th>Bus</th>
       <th>Car</th>
@@ -33,7 +34,7 @@
       <tr class="warning">
         <td><%= post.title %></td>
 <!--         <td><%= post.location %></td>
- -->    <td><%= post.date %></td>
+ ->    <td><%= post.date %></td>
         <td><%= post.text %></td>
         <td><%= post.photos %></td>
         <td><%= post.privacy %></td>
@@ -54,12 +55,49 @@
 </table>
 
 
-</div>
+</div> -->
 
+<div class="container">
+   <% @posts.each do |post| %>
+  <div class="col-sm-3">
+    <h3><%= post.title %></h3>
+
+    <p class="datestyle"><%= post.date.strftime("%d %b %Y")  %></p>
+    
+    <% if post.privacy %>
+      <i class="fa fa-lock" aria-hidden="true"></i>
+    <% end %>
+    <% if post.bus %>
+      <i class="fa fa-bus" aria-hidden="true"></i>
+    <% end %>
+    <% if post.car %>
+      <i class="fa fa-car" aria-hidden="true"></i>
+    <% end %>
+    <% if post.boat %>
+      <i class="fa fa-life-ring" aria-hidden="true"></i>
+    <% end %>
+    <% if post.plane %>
+      <i class="fa fa-plane" aria-hidden="true"></i>
+    <% end %>
+    <% if post.walking %>
+      <i class="fa fa-male" aria-hidden="true"></i>
+    <% end %>
+    <% if post.train %>
+      <i class="fa fa-ticket" aria-hidden="true"></i>
+    <% end %>
+
+    <p><%= post.text.truncate(100) %><%= link_to '(more)', post%></p>
+    
+    <%= link_to 'Show', post,:class=>"btn btn-success" %>
+    <%= link_to 'Edit', edit_post_path(post),:class=>"btn btn-warning"   %>
+    <%= link_to 'Destroy', post,:class=>"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+  <% end %>
+</div>
 
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+
 
 </div>

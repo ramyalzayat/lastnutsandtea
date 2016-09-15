@@ -3,14 +3,107 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+
+
+.datestyle {
+  color: green;
+}
+
+
+
+
+.maincontant {
+  background-image:url('../assets/paper_texture304.jpg');
+  background-repeat: round;
+}
+
+
+
+
+h1 { color: #fff;
+    font-family: 'Righteous', cursive; 
+    font-size: 65px; 
+    font-weight: normal; 
+    line-height: 60px; 
+    margin: 10px 0 20px; 
+    text-transform: uppercase; 
+    text-shadow: 1px 1px 0 #000,  
+     
+  }
+
+h3 {
+  font-family: 'Baloo Tamma', cursive!important;
+  color: #990099!important;
+}
+
+.fa {
+  font-size: 2em!important;
+}
+
+.fa-ticket {
+  color: #FA8072;
+}
+
+
+.fa-location-arrow {
+  color: #F4A460;
+}
+
+
+.fa-male {
+  color: #008000;
+}
+
+
+.fa-plane {
+ color: #191970; }
+
+
+.fa-life-ring {
+  color: #FF4500;
+}
+
+
+.fa-lock {
+ color: black;
+}
+
+.fa-bus {
+  color: #BDB76B;
+}
+
+.fa-car {
+  color: #696969;
+}
+
+
+
+textarea {
+  width: 40%;
+    height: 183px;
+    background-color: lightyellow;
+
+}
+
+
+input {
+	margin-bottom: 15px!important;
+}
+
+label {
+	font-family: 'Indie Flower', cursive;
+	font-size: 20px;
+}
+
 .checkbox {
 	margin-left: -8px;
 }
 
 
 .boxed {
-  border: 2px solid ;
-  width: 50%;
+  border: 1px solid ;
+  width: 60%;
   margin: 0 auto
 }
 
