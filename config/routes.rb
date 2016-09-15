@@ -1,13 +1,10 @@
+
+
 Rails.application.routes.draw do
+  devise_for :users
   resources :profils
   resources :posts
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
-
-end
-
-Rails.application.routes.draw do
-  resources :profils
-  resources :posts
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

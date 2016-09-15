@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :asylum_status %><br>
-    <%= f.text_field :asylum_status %>
+     <%= f.select( :asylum_status,[["Residance","residance"],["Made the interview","made the interview"],["Waiting","waiting"]], { include_blank: true })  %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
@@ -57,11 +57,11 @@
   </div>
   <div class="field">
     <%= f.label :dob %><br>
-    <%= f.datetime_select :dob %>
+    <%= f.date_select :dob,start_year:1960 %>
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
+    <%= f.select( :gender,[["Male","male"],["Female","female"]], { include_blank: true }) %>
   </div>
   <div class="actions">
     <%= f.submit %>
