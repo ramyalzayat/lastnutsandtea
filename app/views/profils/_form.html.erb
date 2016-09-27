@@ -13,22 +13,37 @@
   </div>
   <% end %>
 
-<div class="row container-fluid">
 
 
-  <div class="col-sm-3 text-center">
+<div class="row">
+  
+<div class="col-md-6">
+  
+<img src="#" style="height:auto; width:100%; ">
 
-    <div class="field">
+</div>
+
+<div class="col-md-6">
+  
+
+
+
+
+<div class="container-fluid text-center">
+
+
+
+    <div class="form-group">
         <i class="fa fa-user" aria-hidden="true"></i>  <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> <%= f.label :first_name %><br>
       <%= f.text_field :first_name, class:"form-control" %>
     </div>
 
-    <div class="field">
+    <div class="form-group">
       <i class="fa fa-users" aria-hidden="true"></i> <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>  <%= f.label :last_name %><br>
       <%= f.text_field :last_name, class:"form-control" %>
     </div>
 
-    <div class="field">
+    <div class="form-group">
       <i class="fa fa-calendar" aria-hidden="true"></i>  <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>  <%= f.label :Date_of_Birthday %><br>
       <%= date_select :recipient, :birthday, 
       :order => [:day, :month, :year], 
@@ -37,84 +52,74 @@
     </div>
     
 
-    <div class="field">
+    <div class="form-group">
       <%= f.label :gender %><br>
       <%= f.select( :gender,[["Male","male"],["Female","female"]], { include_blank: true }, { :class => 'form-control' })  %>
     </div>
 
 
-    <div class="field">
+    <div class="form-group">
      <i class="fa fa-globe" aria-hidden="true"></i>  <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>  <%= f.label :city_of_origin %><br>
       <%= f.text_field :city_of_origin, class:"form-control" %>
     </div>
 
-    <div class="field">
+    <div class="form-group">
       <i class="fa fa-map-marker" aria-hidden="true"></i> <%= f.label :current_location %><br>
       <%= f.text_field :current_location, class:"form-control" %>
     </div>
 
-</div>
-
-
- <div class="col-sm-3 text-center">
 
     
 
-    <div class="field">
+    <div class="form-group">
      <i class="fa fa-clock-o" aria-hidden="true"></i> <%= f.label :asylum_status %>
      <%= f.select( :asylum_status,[["Residance","residance"],["Made the interview","made the interview"],["Waiting","waiting"]], { include_blank: true }, { :class => 'form-control' })  %>
    </div>
 
-   <div class="field" >
+   <div class="form-group" >
     <i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> <%= f.label :email %><br>
      <%= f.text_field :email, class:"form-control" %>
    </div>
 
-   <div class="field">
+   <div class="form-group">
    <i class="fa fa-info-circle" aria-hidden="true"></i> <%= f.label :bio %><br>
     <%= f.text_area :bio, class:"form-control" %>
   </div>
 
 
-  </div>
 
 
-<div class="col-sm-3 text-center">
-
-
-  <div class="field">
+  <div class="form-group">
     <i class="fa fa-facebook-square face" aria-hidden="true"></i>  <%= f.label :facebook %><br>
     <%= f.text_field :facebook, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <i class="fa fa-twitter-square" aria-hidden="true"></i> <%= f.label :twitter %><br>
     <%= f.text_field :twitter, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <i class="fa fa-linkedin-square" aria-hidden="true"></i>  <%= f.label :linkedin %><br>
     <%= f.text_field :linkedin, class:"form-control" %>
   </div>
 
-  <div class="field ">
+  <div class="form-group">
     <i class="fa fa-instagram" aria-hidden="true"></i>  <%= f.label :instagram %><br>
     <%= f.text_field :instagram, class:"form-control" %>
   </div>
   
 
-
+<%= f.submit "Confirm", :class => "btn btn-lg btn-success btn-block" %>
 </div>
 
 
   
 </div>
-</div>
-<div class="col-xs-2 text-center ">
-    <%= f.submit "Confirm", :class => "btn btn-lg btn-success btn-block" %>
-  </div>
-</div>
-</div>
+    
+<% end %>
+
 </div>
 
-<% end %>
+
+</div>
