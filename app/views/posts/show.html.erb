@@ -22,6 +22,7 @@
   <strong>Photos:</strong>
   <%= @post.photos %>
 </p> -->
+<%= image_tag @post.image_url(:thumb).to_s %>
 
     <% if @post.privacy %>
       <i class="fa fa-lock" aria-hidden="true"></i>
@@ -43,6 +44,7 @@
     <% end %>
     <% if @post.train %>
       <i class="fa fa-ticket" aria-hidden="true"></i>
+      
     <% end %>
 
 
