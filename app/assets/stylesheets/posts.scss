@@ -6,6 +6,21 @@
 
 
 
+
+
+
+.institles {
+  font-size: 30px;
+  
+  font-weight: bold;
+  color: black;
+}
+
+.inputsize {
+  width: 30%;
+}
+
+
 .datestyle {
   color: green;
 }
@@ -14,7 +29,7 @@
 
 
 .maincontant {
-  background-image:url('../assets/paper_texture304.jpg');
+  /*background-image:url('../assets/paper_texture304.jpg');*/
   background-repeat: round;
 }
 
@@ -100,6 +115,15 @@ label {
 	margin-left: -8px;
 }
 
+
+.boxed2 {
+  border: 2px ridge;
+  width: 45%;
+  margin: 0 auto;
+  border-radius: 30px;
+  
+
+}
 
 .boxed {
   border: 1px solid ;

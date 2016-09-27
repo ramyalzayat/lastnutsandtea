@@ -1,70 +1,126 @@
-<%= form_for @profil, :html => {:multipart => true} do |f| %>
-  <% if @profil.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@profil.errors.count, "error") %> prohibited this profil from being saved:</h2>
 
-      <ul>
+<%= form_for @profil, :html => {:multipart => true} do |f| %>
+
+<div class="maincontant">
+
+  <%= form_for(@profil) do |f| %>
+
+  <% if @profil.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@profil.errors.count, "error") %> prohibited this profil from being saved:</h2>
+
+    <ul>
       <% @profil.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
 
 <%= f.file_field :image %>
+<div class="row container-fluid">
+
+
+  <div class="col-sm-3 text-center">
+
+    <div class="field">
+        <i class="fa fa-user" aria-hidden="true"></i>  <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> <%= f.label :first_name %><br>
+      <%= f.text_field :first_name, class:"form-control" %>
+    </div>
+
+    <div class="field">
+      <i class="fa fa-users" aria-hidden="true"></i> <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>  <%= f.label :last_name %><br>
+      <%= f.text_field :last_name, class:"form-control" %>
+    </div>
+
+    <div class="field">
+      <i class="fa fa-calendar" aria-hidden="true"></i>  <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>  <%= f.label :Date_of_Birthday %><br>
+      <%= date_select :recipient, :birthday, 
+      :order => [:day, :month, :year], 
+      :start_year => 1950, 
+      :end_year => 2011 %>
+    </div>
+    
+
+    <div class="field">
+      <%= f.label :gender %><br>
+      <%= f.select( :gender,[["Male","male"],["Female","female"]], { include_blank: true }, { :class => 'form-control' })  %>
+    </div>
+
+
+    <div class="field">
+     <i class="fa fa-globe" aria-hidden="true"></i>  <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>  <%= f.label :city_of_origin %><br>
+      <%= f.text_field :city_of_origin, class:"form-control" %>
+    </div>
+
+    <div class="field">
+      <i class="fa fa-map-marker" aria-hidden="true"></i> <%= f.label :current_location %><br>
+      <%= f.text_field :current_location, class:"form-control" %>
+    </div>
+
+</div>
+
+
+ <div class="col-sm-3 text-center">
+
+    
+
+    <div class="field">
+     <i class="fa fa-clock-o" aria-hidden="true"></i> <%= f.label :asylum_status %>
+     <%= f.select( :asylum_status,[["Residance","residance"],["Made the interview","made the interview"],["Waiting","waiting"]], { include_blank: true }, { :class => 'form-control' })  %>
+   </div>
+
+   <div class="field" >
+    <i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> <%= f.label :email %><br>
+     <%= f.text_field :email, class:"form-control" %>
+   </div>
+
+   <div class="field">
+   <i class="fa fa-info-circle" aria-hidden="true"></i> <%= f.label :bio %><br>
+    <%= f.text_area :bio, class:"form-control" %>
+
+  </div>
+
+
+  </div>
+
+
+<div class="col-sm-3 text-center">
+
+
   <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <i class="fa fa-facebook-square face" aria-hidden="true"></i>  <%= f.label :facebook %><br>
+    <%= f.text_field :facebook, class:"form-control" %>
   </div>
+
   <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <i class="fa fa-twitter-square" aria-hidden="true"></i> <%= f.label :twitter %><br>
+    <%= f.text_field :twitter, class:"form-control" %>
   </div>
+
   <div class="field">
-    <%= f.label :bio %><br>
-    <%= f.text_area :bio %>
+    <i class="fa fa-linkedin-square" aria-hidden="true"></i>  <%= f.label :linkedin %><br>
+    <%= f.text_field :linkedin, class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :city_of_origin %><br>
-    <%= f.text_field :city_of_origin %>
+
+  <div class="field ">
+    <i class="fa fa-instagram" aria-hidden="true"></i>  <%= f.label :instagram %><br>
+    <%= f.text_field :instagram, class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :current_location %><br>
-    <%= f.text_field :current_location %>
+  
+
+
+</div>
+
+
+  
+</div>
+</div>
+<div class="col-xs-2 text-center ">
+    <%= f.submit "Confirm", :class => "btn btn-lg btn-success btn-block" %>
   </div>
-  <div class="field">
-    <%= f.label :asylum_status %><br>
-     <%= f.select( :asylum_status,[["Residance","residance"],["Made the interview","made the interview"],["Waiting","waiting"]], { include_blank: true })  %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :facebook %><br>
-    <%= f.text_field :facebook %>
-  </div>
-  <div class="field">
-    <%= f.label :twitter %><br>
-    <%= f.text_field :twitter %>
-  </div>
-  <div class="field">
-    <%= f.label :linkedin %><br>
-    <%= f.text_field :linkedin %>
-  </div>
-  <div class="field">
-    <%= f.label :instagram %><br>
-    <%= f.text_field :instagram %>
-  </div>
-  <div class="field">
-    <%= f.label :dob %><br>
-    <%= f.date_select :dob,start_year:1960 %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.select( :gender,[["Male","male"],["Female","female"]], { include_blank: true }) %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+</div>
+</div>
+
 <% end %>

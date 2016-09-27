@@ -1,6 +1,15 @@
+<div class="maincontant">
+
 <p id="notice"><%= notice %></p>
 
+
 <%= image_tag @profil.image_url(:thumb).to_s %>
+
+<div class="container">
+
+
+
+
 <p>
   <strong>First name:</strong>
   <%= @profil.first_name %>
@@ -66,5 +75,10 @@
   <%= @profil.gender %>
 </p>
 
+
+
+</div>
 <%= link_to 'Edit', edit_profil_path(@profil) %> |
 <%= link_to 'Back', profils_path %>
+
+</div>
