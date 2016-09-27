@@ -3,12 +3,17 @@
 <p id="notice"><%= notice %></p>
 
 
-<%= image_tag @profil.image_url(:thumb).to_s %>
+
 
 <div class="container">
 
+<div class="col-md-3">
 
+<%= image_tag @profil.image_url(:thumb).to_s %>
 
+</div>
+
+<div class="col-lg-4">
 
 <p>
   <strong>First name:</strong>
@@ -47,7 +52,7 @@
 
 <p>
   <strong>Facebook:</strong>
-  <%= @profil.facebook %>
+  <a href="<%= @profil.facebook %>" target="_blank">Facebook Profile</a>
 </p>
 
 <p>
@@ -66,7 +71,7 @@
 </p>
 
 <p>
-  <strong>Dob:</strong>
+  <strong>Date of Birth:</strong>
   <%= @profil.dob %>
 </p>
 
@@ -75,10 +80,11 @@
   <%= @profil.gender %>
 </p>
 
-
-
-</div>
 <%= link_to 'Edit', edit_profil_path(@profil) %> |
 <%= link_to 'Back', profils_path %>
 
+</div>
+
+
+</div>
 </div>
