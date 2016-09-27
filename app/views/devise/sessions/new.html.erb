@@ -5,6 +5,9 @@
 <ins class="institles"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</ins><br><br><br>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  
+
+
   <div class="field">
     <i class="fa fa-envelope" aria-hidden="true"></i> <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true , class:"form-control", placeholder: ' Email address' %>
@@ -31,3 +34,4 @@
 </div>
 </div>
 </div>
+
