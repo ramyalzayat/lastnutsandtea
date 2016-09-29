@@ -34,7 +34,11 @@
       <i class="fa fa-ticket" aria-hidden="true"></i>
     <% end %>
 
-  
+    <p><%= post.text.truncate(100) %><%= link_to '(more)', post%></p>
+    
+    <%= link_to 'Show', post,:class=>"btn btn-success" %>
+    <%= link_to 'Edit', edit_post_path(post),:class=>"btn btn-warning"   %>
+    
   </div>
   <% end %>
 </div>
