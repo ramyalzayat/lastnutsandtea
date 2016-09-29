@@ -16,16 +16,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet' type='text/css'>
 
-  <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Jomhuria" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=El+Messiri:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amiri" rel="stylesheet">
 
-  <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
 
-  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+
+
 
   <link href="/bootstrap.css" rel="stylesheet">
 
@@ -47,7 +45,7 @@
     <body>
       <div class="first" id="first">
         <div class="navbar-wrapper">
-          <div class="container-fluid">
+          <div class="container">
             <nav class="navbar navbar-fixed-top">
               <div class="container-full">
                 <div class="navbar-header">
@@ -76,7 +74,7 @@
                         </li>
                         <li><a href="/posts/">All Stories</a></li>
                         <li><a href="/posts/new/">New Story</a></li>
-                        <li><a href="#">My Stories</a></li>
+                        <li><a href="/posts/myposts/">My Stories</a></li>
                       </ul>
                     </li>
 
@@ -99,8 +97,9 @@
                       </a>
                       <ul class="dropdown-menu">
                         <li><a href="/profils/<%= current_user.id %>">My Profile</a></li>
-                        <li><a href="#">Edit My Profile</a></li>
-                        <li><a href="#">Reset My password</a></li>
+                        <li><a href="/profils/<%= current_user.id %>/edit">Edit My Profile</a></li>
+                        <li><%= link_to "Change your password", edit_user_registration_path %></li>
+
                       </ul>
                     </li>
                     <li>

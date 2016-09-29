@@ -58,6 +58,7 @@
 </div> -->
 
 <div class="container">
+  <% debug @posts %>
    <% @posts.each do |post| %>
   <div class="col-sm-3">
     <h3><%= post.title %></h3>
@@ -89,8 +90,10 @@
     <p><%= post.text.truncate(100) %><%= link_to '(more)', post%></p>
     
     <%= link_to 'Show', post,:class=>"btn btn-success" %>
+    <!-- 
     <%= link_to 'Edit', edit_post_path(post),:class=>"btn btn-warning"   %>
-    <%= link_to 'Destroy', post,:class=>"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+ -->
+   <!--  <%= link_to 'Destroy', post,:class=>"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %> -->
   </div>
   <% end %>
 </div>

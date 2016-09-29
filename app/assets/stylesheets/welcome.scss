@@ -2,13 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.css
 
-.maincontant {
-  background-image: url('/assits/backgroundimg.jpg');
 
+h1,h2,h3 {
+font-family: 'El Messiri', sans-serif!important;  
+}
+
+h2 {
+  font-size: 35px;
 }
 
 
-
+p {
+      color: #c0c0c0;
+}
 
 .carousel-caption {
 
@@ -31,8 +37,8 @@
 }
 
 .carousel-caption {
-  font-family: 'Bree Serif', serif
-  !important;  
+  /*font-family: 'Bree Serif', serif
+  !important; */ 
 }
 
 
@@ -46,15 +52,12 @@
 }
 
 
-.container-full {
-  margin: 0 auto;
-  width: 100%;
-}
+
 
 
 
 .carousel {
-  height: 96vh;
+  height: 90vh;
   margin-bottom: 0px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -64,7 +67,7 @@
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 100vh;
+  height: 90vh;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -131,7 +134,7 @@
 
 h2 {
 	
-	color: #800080
+	color: white
 	
 
 	!important;
@@ -139,17 +142,17 @@ h2 {
 
 h2 {
 	
-	font-family: 'Abril Fatface', cursive
+	/*font-family: 'Abril Fatface', cursive*/
 
-	!important;
-
-}
-
-h2 {
-	font-size: 30px
-	!important;
+	
 
 }
+
+
+
+.mandr {background-color: #222222;
+}
+
 
 h2 {
 	text-shadow: 1px 1px;
@@ -159,7 +162,7 @@ h2 {
 
 
 .row {
-	color: #191970;
+	
   margin-right: 0px
   !important;
   margin-left: 0%
@@ -180,21 +183,23 @@ h2 {
 
 
 p {
-	font-family: 'Aldrich', sans-serif;
+	
 	font-size: 17px!important;
+  font-family: 'Amiri', serif!important;
+
 }
 
 
 
 .colorblack {
-	color: black;
+	    color: #c0c0c0;
 }
 
 
 
 
 .footercolor {
-  color:#800080;
+  color:white;
 }
 
 .slidepos {
@@ -351,6 +356,7 @@ p {
 
 body {
   cursor: pointer;
+      background-color: #333333!important;
 }
 
 

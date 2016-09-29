@@ -3,56 +3,45 @@
 <link href="/posts.scss" rel="stylesheet">
 <p id="notice"><%= notice %></p>
 
-<h3>
-  <%= @post.title %>
-</h3>
+<h2>My Posts</h2>
 
-<!-- <p>
-  <strong>Location:</strong>
-  <%= @post.location %>
-</p> -->
+<div class="container">
+   <% @myposts.each do |post| %>
+  <div class="col-sm-3">
+    <h3><%= post.title %></h3>
 
-
-  <p class="datestyle"><%= @post.date.strftime("%d %b %Y")  %></p>
-
-
-
-
-<!-- <p>
-  <strong>Photos:</strong>
-  <%= @post.photos %>
-</p> -->
-<%= image_tag @post.image_url(:thumb).to_s %>
-
-    <% if @post.privacy %>
+    <p class="datestyle"><%= post.date.strftime("%d %b %Y")  %></p>
+    
+    <% if post.privacy %>
       <i class="fa fa-lock" aria-hidden="true"></i>
     <% end %>
-    <% if @post.bus %>
+    <% if post.bus %>
       <i class="fa fa-bus" aria-hidden="true"></i>
     <% end %>
-    <% if @post.car %>
+    <% if post.car %>
       <i class="fa fa-car" aria-hidden="true"></i>
     <% end %>
-    <% if @post.boat %>
+    <% if post.boat %>
       <i class="fa fa-life-ring" aria-hidden="true"></i>
     <% end %>
-    <% if @post.plane %>
+    <% if post.plane %>
       <i class="fa fa-plane" aria-hidden="true"></i>
     <% end %>
-    <% if @post.walking %>
+    <% if post.walking %>
       <i class="fa fa-male" aria-hidden="true"></i>
     <% end %>
-    <% if @post.train %>
+    <% if post.train %>
       <i class="fa fa-ticket" aria-hidden="true"></i>
-      
     <% end %>
 
+  
+  </div>
+  <% end %>
+</div>
 
-<p class="row">
-  <%= @post.text %>
-</p>
+
+<br>
 
 
 
-<%= link_to 'Back', posts_path,:class=>"btn btn-default" %>
 </div>
