@@ -98,8 +98,15 @@
                         <span class="caret"></span>
                       </a>
                       <ul class="dropdown-menu">
+
+                      <% if current_user.profil.blank? %>
+                        <li><a href="/profils/new">New Profile</a></li>
+                     
+                      <% else %>     
                         <li><a href="/profils/<%= current_user.id %>">My Profile</a></li>
                         <li><a href="#">Edit My Profile</a></li>
+                         <% end %>
+                        
                         <li><a href="#">Reset My password</a></li>
                       </ul>
                     </li>

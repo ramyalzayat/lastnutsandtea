@@ -2,7 +2,9 @@ require 'rmagick'
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
-
+ def extension_whitelist
+    %w(jpg jpeg gif png)
+  end
   # Include RMagick or MiniMagick support:
    include CarrierWave::RMagick
   # include CarrierWave::MiniMagick

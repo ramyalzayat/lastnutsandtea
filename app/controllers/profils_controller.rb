@@ -13,9 +13,16 @@ class ProfilsController < ApplicationController
   end
 
   # GET /profils/new
+  
   def new
     @profil = Profil.new
+  if current_user.profil.blank?
+    # create profil for user
+  else
+    # raise error which doesn't make sense or redirect like
+    redirect_to profil_url(current_user)
   end
+end
 
   # GET /profils/1/edit
   def edit
@@ -25,7 +32,7 @@ class ProfilsController < ApplicationController
   # POST /profils.json
   def create
     @profil = Profil.new(profil_params)
-
+    @profil.user_id = current_user.id
     respond_to do |format|
       if @profil.save
         format.html { redirect_to @profil, notice: 'Profil was successfully created.' }
@@ -33,6 +40,7 @@ class ProfilsController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @profil.errors, status: :unprocessable_entity }
+      
       end
     end
   end
