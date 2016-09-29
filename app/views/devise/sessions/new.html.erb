@@ -2,7 +2,7 @@
 <div class="maincontant">
 <div class="container">
 <div class="col-md-4 col-md-offset-4 text-center">
-<ins class="institles"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</ins><br><br><br>
+<h1> Log in</h1><br><br><br>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   
@@ -21,7 +21,7 @@
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
-      <i class="fa fa-floppy-o" aria-hidden="true"></i> <%= f.label :remember_me %>
+       <%= f.label :remember_me %>
     </div>
   <% end -%>
 
