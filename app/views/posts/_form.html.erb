@@ -1,4 +1,4 @@
-<div class="maincontant text-center">
+
 
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
@@ -14,20 +14,22 @@
   <% end %>
 
 
-
-  <div class="field">
+<div class="container text-center">
+<div class="col-lg-8 col-md-offset-2">
+  
+  <div class="form-group">
   <i class="fa fa-bookmark-o" aria-hidden="true"></i>
-    <%= f.label :title %><br>
-    <%= f.text_field :title%>
+    <%= f.label :title%><br>
+    <%= f.text_field :title, class:"form-control" %>
   </div>
   <!-- <div class="field">
     <%= f.label :location %><br>
     <%= f.number_field :location %>
   </div> -->
-  <div class="field">
+  <div class="form-group">
   <i class="fa fa-calendar" aria-hidden="true"></i>
     <%= f.label 'Date of the Story' %><br>
-    <%= f.date_select :date,start_year:2000 %>
+    <%= f.date_select :date,start_year:2000,end_year:2016 %>
   </div>
 
  
@@ -48,7 +50,7 @@
 
 
   <label class="checkbox-inline">
-  <div class="field">
+  <div class="form-group">
   <i class="fa fa-bus" aria-hidden="true"></i>
     <%= f.label :bus %><br>
     <%= f.check_box :bus %>
@@ -57,7 +59,7 @@
 
 
   <label class="checkbox-inline">
-  <div class="field">
+  <div class="form-group">
   <i class="fa fa-car" aria-hidden="true"></i>
     <%= f.label :car %><br>
     <%= f.check_box :car %>
@@ -66,7 +68,7 @@
 
 
   <label class="checkbox-inline">
-  <div class="field">
+  <div class="form-group">
   <i class="fa fa-life-ring" aria-hidden="true"></i>
     <%= f.label :boat %><br>
     <%= f.check_box :boat %>
@@ -75,16 +77,16 @@
 
 
   <label class="checkbox-inline">
-  <div class="field">
+  <div class="form-group">
   <i class="fa fa-plane" aria-hidden="true"></i>
     <%= f.label :plane %><br>
     <%= f.check_box :plane %>
   </div>
 </label>
 
-<%= f.file_field :image %>
+
   <label class="checkbox-inline">
-  <div class="field">
+  <div class="form-group">
 <i class="fa fa-male" aria-hidden="true"></i>
     <%= f.label :walking %><br>
     <%= f.check_box :walking %>
@@ -93,7 +95,7 @@
 
 
   <label class="checkbox-inline">
-  <div class="field">
+  <div class="form-group">
   <i class="fa fa-ticket" aria-hidden="true"></i>
     <%= f.label :train %><br>
     <%= f.check_box :train %>
@@ -101,15 +103,21 @@
 </label><br><br><br>
 </div><br>
 
- <div class="field">
+ <div class="form-group">
   <i class="fa fa-book" aria-hidden="true"></i>
     <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.text_area :text, class:"form-control text_box" %>
   </div>
 
+<div class="form-group">
 
-  <label class="checkbox-inline">
-  <div class="field">
+  <%= f.file_field :image %>
+
+</div>
+
+
+  <label>
+  <div class="form-group">
   <i class="fa fa-lock" aria-hidden="true"></i>
     <%= f.label :privacy %>
     <%= f.check_box :privacy %>
@@ -117,16 +125,14 @@
 </label><br><br>
 
  
-  <div class="actions">
-    
-    
-
+<div class="action">
 <%= button_tag( :class => "btn btn-success") do %>
   Save Story <i class="fa fa-floppy-o" aria-hidden="true"></i>
-<% end %>
-
-
-  </div>
-<% end %>
+</div>
+</div>
 
 </div>
+
+
+<% end %>
+<% end %>

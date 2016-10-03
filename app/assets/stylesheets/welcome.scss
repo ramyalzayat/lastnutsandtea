@@ -2,6 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.css
 
+ 
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 40px;
+      }
+     
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+
+
+
 
 h1,h2,h3 {
 font-family: 'El Messiri', sans-serif!important;  
@@ -13,8 +44,15 @@ h2 {
 
 
 p {
-      color: #c0c0c0;
+      color: black;
 }
+
+
+.marketing {
+  background-color: white!important;
+}
+
+
 
 .carousel-caption {
 
@@ -134,7 +172,7 @@ p {
 
 h2 {
 	
-	color: white
+	color: #595959
 	
 
 	!important;
@@ -150,7 +188,7 @@ h2 {
 
 
 
-.mandr {background-color: #222222;
+.mandr {background-color: #404040;
 }
 
 
@@ -167,6 +205,8 @@ h2 {
   !important;
   margin-left: 0%
   !important;
+      padding-top: 70px;
+
 
 }
 
@@ -190,16 +230,21 @@ p {
 }
 
 
+.godownformore {
+  background-color:#404040; 
+  padding-bottom: 20px;
+}
+
 
 .colorblack {
-	    color: #c0c0c0;
+	    color: black;
 }
 
 
 
 
 .footercolor {
-  color:white;
+  color:#333333;
 }
 
 .slidepos {
@@ -207,7 +252,9 @@ p {
 }
 
 
-
+.footerback {
+  background-color: #333333;
+}
 
 
 
@@ -356,7 +403,7 @@ p {
 
 body {
   cursor: pointer;
-      background-color: #333333!important;
+      background-color: #e7e7e7!important;
 }
 
 

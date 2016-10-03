@@ -5,7 +5,9 @@
 
 
 
-
+.text_box {
+  height: 200px!important;
+}
 
 
 
@@ -36,7 +38,7 @@
 
 
 
-h1 { color: white;
+h1 { color: #595959;
     
     font-size: 65px; 
     font-weight: normal; 
@@ -49,7 +51,7 @@ h1 { color: white;
 
 h3 {
   
-  color: white!important;
+  color: #595959!important;
 }
 
 .fa {
@@ -57,7 +59,7 @@ h3 {
 }
 
 .fa-ticket {
-  color: white;
+  color: red;
 }
 
 
@@ -94,10 +96,7 @@ h3 {
 
 
 
-textarea {
-  width: 40%;
-    height: 183px;
-}
+
 
 
 input {
@@ -125,7 +124,7 @@ label {
 
 .boxed {
   border: 1px solid ;
-  width: 60%;
+  width: 100%;
   margin: 0 auto
 }
 

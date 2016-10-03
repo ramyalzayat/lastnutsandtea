@@ -22,7 +22,7 @@
   <strong>Photos:</strong>
   <%= @post.photos %>
 </p> -->
-<%= image_tag @post.image_url(:thumb).to_s %>
+
 
     <% if @post.privacy %>
       <i class="fa fa-lock" aria-hidden="true"></i>
@@ -50,7 +50,11 @@
 
 <p class="row">
   <%= @post.text %>
-</p>
+</p><br><br><br>
+<div>
+  <%= image_tag @post.image_url(:thumb).to_s %>
+</div>
+<br><br><br><br>
 
 
 
