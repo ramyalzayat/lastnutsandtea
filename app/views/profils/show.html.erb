@@ -1,97 +1,125 @@
 <div class="maincontant">
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
+  <div class="container">
+    <div class="row profile">
+      <div class="col-md-3">
+        <div class="profile-sidebar solid">
+          <!-- SIDEBAR USERPIC -->
+          <div class="profile-userpic">
+          
+            <%= image_tag @profil.image_url(:thumb).to_s, class:"thumbnail" %>
+          
+          </div>
+          <!-- END SIDEBAR USERPIC -->
+          <!-- SIDEBAR USER TITLE -->
+          <div class="profile-usertitle">
+            <div class="profile-usertitle-name">
+              
+              
+              <%= @profil.first_name %>
+              <%= @profil.last_name %><br>
+              
+              <strong>Gender:</strong>
+              <%= @profil.gender %>
+            </div>
+            <div class="profile-usertitle-job">
+              <strong>City of origin:</strong>
+              <%= @profil.city_of_origin %><br>
+              <strong>Current location:</strong>
+              <%= @profil.current_location %><br>
+               <strong>Date of Birth:</strong>
+                <%= @profil.dob.strftime("%d-%b-%Y")%><br>
+              <strong>Asylum status:</strong>
+              <%= @profil.asylum_status %>
+              
+
+            </div>
+          </div>
+          <!-- END SIDEBAR USER TITLE -->
+          <!-- SIDEBAR BUTTONS -->
+          <div class="profile-userbuttons">
+            <button type="button" class="btn btn-success btn-sm"><%= link_to 'Edit My Profile', edit_profil_path(@profil), :class =>"editmypro" %></button>
+            
+          </div>
+          <!-- END SIDEBAR BUTTONS -->
+          <!-- SIDEBAR MENU -->
+          <div class="profile-usermenu">
+            <ul class="nav">
+              <li class="active">
+                <a href="#">
+                  <i class="glyphicon glyphicon-home"></i>
+                  Overview </a>
+                </li>
+                <li>
+                  <a href="/users/edit">
+                    <i class="glyphicon glyphicon-user"></i>
+                    Account Settings </a>
+                  </li>
+                  <li>
+                    <a href="/posts/myposts/">
+                      <i class="fa fa-book" aria-hidden="true"></i>
+
+                      My Stories </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="glyphicon glyphicon-flag"></i>
+                        Help </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- END MENU -->
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="profile-content solid">
+                  <p class="text-muted">
+                    <strong>Bio:</strong>
+                    <%= @profil.bio %>
+                  </p><br><br><br><br>
+                  <strong>Email<strong>
+                  <a href="mailto:<%= @profil.email %>" target="_top"><%= @profil.email %></a><br>
+
+                  <% unless @profil.facebook.blank? %> 
+                  <strong>Facebook:</strong>
+                  <a href="<%= @profil.facebook %>" target="_blank">Facebook Profile</a><br>
+                  <% end %>
+                  
+                  <% unless @profil.twitter.blank? %>
+                  <strong>Twitter:</strong>
+                  <a href="<%= @profil.twitter %>" target="_blank">twitter</a><br>
+                  <% end %>
+
+                  <% unless @profil.linkedin.blank? %>
+                  <strong>Linkedin:</strong>
+                  <a href="<%= @profil.linkedin %>" target="_blank">linkedin Profile</a><br>
+                  <% end %>
+
+                  <% unless @profil.instagram.blank? %>
+                  <strong>Instagram:</strong>
+                  <%= @profil.instagram %>
+                  <% end %>
 
 
 
 
-<div class="container">
-
-<div class="col-md-3">
-
-<%= image_tag @profil.image_url(:thumb).to_s %>
-
-</div>
-
-<div class="col-lg-4">
-
-<p>
-  <strong>First name:</strong>
-  <%= @profil.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @profil.last_name %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @profil.bio %>
-</p>
-
-<p>
-  <strong>City of origin:</strong>
-  <%= @profil.city_of_origin %>
-</p>
-
-<p>
-  <strong>Current location:</strong>
-  <%= @profil.current_location %>
-</p>
-
-<p>
-  <strong>Asylum status:</strong>
-  <%= @profil.asylum_status %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @profil.email %>
-</p>
 
 
 
-<p>
-  <strong>Facebook:</strong>
-  <a href="<%= @profil.facebook %>" target="_blank">Facebook Profile</a>
-</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <center>
 
 
 
-<p>
-  <strong>Twitter:</strong>s
-  <a href="<%= @profil.twitter %>" target="_blank">twitter</a>
-</p>
 
 
-<p>
-  <strong>Linkedin:</strong>
-  <a href="<%= @profil.linkedin %>" target="_blank">linkedin Profile</a>
-</p>
 
 
-<p>
-  <strong>Instagram:</strong>
-  <a href="<%= @profil.instagram %>" target="_blank">instagram</a>
-</p>
+          </div>
 
 
-<p>
-  <strong>Date of Birth:</strong>
-  <%= @profil.dob %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @profil.gender %>
-</p>
-
-<%= link_to 'Edit', edit_profil_path(@profil) %> |
-<%= link_to 'Back', profils_path %>
-
-</div>
-
-
-</div>
-</div>

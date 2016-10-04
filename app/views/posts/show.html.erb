@@ -1,11 +1,11 @@
-<div class="maincontant text-center">
+<div class="maincontant text-center showpost">
 
 <link href="/posts.scss" rel="stylesheet">
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p><br>
 
-<h3>
+<h1>
   <%= @post.title %>
-</h3>
+</h1>
 
 <!-- <p>
   <strong>Location:</strong>
@@ -43,16 +43,19 @@
       <i class="fa fa-male" aria-hidden="true"></i>
     <% end %>
     <% if @post.train %>
-      <i class="fa fa-ticket" aria-hidden="true"></i>
-      
-    <% end %>
+      <i class="fa fa-ticket" aria-hidden="true"></i>    
+    <% end %><br><br>
 
+<div class="container">
 
-<p class="row">
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="col-md-9 col-md-offset-1">
+<p class="text-muted">
   <%= @post.text %>
 </p><br><br><br>
-<div>
-  <%= image_tag @post.image_url(:thumb).to_s %>
+</div class="col-md-12">
+
+  <%= image_tag @post.image_url(:thumb).to_s, class:"thumbnail" %>
 </div>
 <br><br><br><br>
 

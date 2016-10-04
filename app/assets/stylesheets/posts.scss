@@ -5,6 +5,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 .text_box {
   height: 200px!important;
 }
@@ -24,7 +33,7 @@
 
 
 .datestyle {
-  color: green;
+  color: red;
 }
 
 
@@ -44,19 +53,16 @@ h1 { color: #595959;
     font-weight: normal; 
     line-height: 60px; 
     margin: 10px 0 20px; 
-    text-transform: uppercase; 
     text-shadow: 1px 1px 0 #000,  
      
   }
 
 h3 {
   
-  color: #595959!important;
+  color: white!important;
 }
 
-.fa {
-  font-size: 1.5em!important;
-}
+
 
 .fa-ticket {
   color: red;
@@ -106,6 +112,7 @@ input {
 label {
 	
 	font-size: 20px;
+  font-weight:normal!important;
 }
 
 .checkbox {

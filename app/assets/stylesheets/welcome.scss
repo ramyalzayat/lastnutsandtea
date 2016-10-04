@@ -31,10 +31,51 @@
       }
 
 
+.navcolorA {
+  color: #F05F40!important;
+}
+
+
+.navbar-brand {
+  font-family: 'El Messiri', sans-serif!important;
+  font-size: 32px!important;
+  color: #F05F40!important;  
+}
+
+
+.navbar-colormy {
+ color: #F05F40!important; 
+}
+
+
+.primary {
+    border-color: #F05F40!important;
+    border-width: 3px!important;
+    max-width: 242px;
+    position: relative;
+    right: 0px;
+    top: -14px;
+}
+
+
+.light {
+ border-color: white!important;
+    border-width: 3px!important;
+    max-width: 50px;
+    position: relative;
+    right: 0px;
+    top: -14px; 
+}
 
 
 
-h1,h2,h3 {
+
+h4 {
+  color: #333!important;
+}
+
+
+h1,h2,h3,h4 {
 font-family: 'El Messiri', sans-serif!important;  
 }
 
@@ -44,12 +85,21 @@ h2 {
 
 
 p {
-      color: black;
+      color:rgba(255,255,255,.7);
+}
+
+.text-muted {
+ color:black!important;
+}
+
+
+.text-primary {
+    color: green!important;
 }
 
 
 .marketing {
-  background-color: white!important;
+  background-color: #F05F40!important;
 }
 
 
@@ -95,8 +145,9 @@ p {
 
 
 .carousel {
-  height: 90vh;
+  height: 100vh;
   margin-bottom: 0px;
+  margin-top: -20px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -105,7 +156,7 @@ p {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 90vh;
+  height: 100vh;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -151,8 +202,8 @@ p {
 
 
 .img-circle2 {
- width:120px;
- height:120px;
+ width:115px;
+ height:115px;
  border-radius: 35%;
  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  /*position: relative;
@@ -163,8 +214,9 @@ p {
   /*position: relative;
   left: 60px;*/
  
-  max-width: 90%;
+  max-width: 75%;
   height: auto;
+      border-radius: 20px;
   
 }
 
@@ -172,7 +224,7 @@ p {
 
 h2 {
 	
-	color: #595959
+	color: white
 	
 
 	!important;
@@ -188,8 +240,14 @@ h2 {
 
 
 
-.mandr {background-color: #404040;
+.mandr {background-color: #222;
 }
+
+
+.infoabout {
+  background-color: white !important;
+}
+
 
 
 h2 {
@@ -200,15 +258,12 @@ h2 {
 
 
 .row {
-	
-  margin-right: 0px
-  !important;
-  margin-left: 0%
-  !important;
-      padding-top: 70px;
 
-
+padding-top: 70px;
+margin-right: 15px!important;
+    margin-left: 15px!important;
 }
+
 
 
 .row-backgroundcolor {
@@ -334,6 +389,19 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 .navbar-collapse {
 
   background-color: black;
@@ -398,12 +466,9 @@ p {
   margin-left: 0px!important;
 }
 
-
+*/
 
 
 body {
   cursor: pointer;
-      background-color: #e7e7e7!important;
-}
-
-
+        }

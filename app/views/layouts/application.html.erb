@@ -40,13 +40,18 @@
       <!-- Custom styles for this template -->
       <link href="carousel.css" rel="stylesheet">
       <script src="testme.js" language="javascript" type="text/javascript"></script>
+
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
     </head>
 
     <body>
       <div class="first" id="first">
         <div class="navbar-wrapper">
           <div class="container">
-            <nav class="navbar navbar-fixed-top">
+            <nav class="navbar navbar-static-top">
               <div class="container-full">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -59,51 +64,53 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="/welcome/index">Home</a></li>
+                    <li class="active"><a href="/welcome/index" class="navcolorA"><i class="fa fa-home" aria-hidden="true"></i>
+ Home</a></li>
                     
 
 
                       <% if user_signed_in? %>
 
                     <li class=" dropdown">
-                      <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stories <span class="caret"></span></a>
+                      <a href="#" class="dropdown-toggle navcolorA" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stories <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                       
                         <li class=" dropdown">
                           
                         </li>
-                        <li><a href="/posts/">All Stories</a></li>  
-                        <li><a href="/posts/new/">New Story</a></li>
-                        <li><a href="/posts/myposts/">My Stories</a></li>
+                        <li><a href="/posts/" class="navcolorA">All Stories</a></li>  
+                        <li><a href="/posts/new/" class="navcolorA">New Story</a></li>
+                        <li><a href="/posts/myposts/" class="navcolorA">My Stories</a></li>
                       </ul>
                     </li>
 
                     <% else %>
                       
-                      <li><a href="/posts/">All Stories</a></li>
+                      <li><a href="/posts/" class="navcolorA">All Stories</a></li>
                     
                       <% end %>
 
 
-                    <li><a onclick="smoothScroll(document.getElementById('second'))">About Us</a></li>
+                    <li><a onclick="smoothScroll(document.getElementById('second'))" class="navcolorA">About Us</a></li>
                     
                     
                   </ul>
                   <ul class="nav navbar-nav pull-right">
                   <% if user_signed_in? %>
                     <li class=" dropdown">
-                      <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account 
+                      <a href="#" class="dropdown-toggle navbar-colormy" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>
+ My Account 
                         <span class="caret"></span>
                       </a>
 
                       <ul class="dropdown-menu">
 
                       <% if current_user.profil.blank? %>
-                        <li><a href="/profils/new">New Profile</a></li>
+                        <li><a href="/profils/new" class="navcolorA">New Profile</a></li>
                      
                       <% else %>     
-                        <li><a href="/profils/<%= current_user.id %>">My Profile</a></li>
-                        <li><a href="/profils/<%= current_user.id %>/edit">Edit My Profile</a></li>
+                        <li><a href="/profils/<%= current_user.id %>" class="navcolorA">My Profile</a></li>
+                        <li><a href="/profils/<%= current_user.id %>/edit" class="navcolorA">Edit My Profile</a></li>
                         <li><%= link_to "Change your password", edit_user_registration_path %></li>
                        
                          <% end %>
@@ -115,7 +122,7 @@
                       </ul>
                     </li>
                     <li>
-                    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+                    <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"navbar-colormy" %>
                     </li>
                     
                    
@@ -134,9 +141,7 @@
         </div>
       </div>
 
-
-      
-
+     
 
 
 
@@ -153,9 +158,9 @@
 <div id="footer">
       <div class="footerback">
       <ul class="social">
-        <li class="facebook2"><a href="https://www.facebook.com/nutsandtea" target="blank"><i class="fa fa-facebook fa-3x"></i></a></li>
-        <li class="twitter2"><a href="https://twitter.com/nuts_and_tea" target="blank"><i class="fa fa-twitter fa-3x"></i></a></li>
-        <li class="instagram"><a href="https://www.instagram.com/nutsandtea" target="blank"><i class="fa fa-instagram fa-3x"></i></a></li>
+        <li class="facebook2"><a href="https://www.facebook.com/nutsandtea" target="blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li class="twitter2"><a href="https://twitter.com/nuts_and_tea" target="blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li class="instagram"><a href="https://www.instagram.com/nutsandtea" target="blank"><i class="fa fa-instagram fa-2x"></i></a></li>
       </ul>
       </div>
       

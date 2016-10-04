@@ -1,18 +1,19 @@
-<div class="maincontant text-center">
+<div class="maincontant text-center allposts">
 <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
 <link href="/posts.scss" rel="stylesheet">
 <p id="notice"><%= notice %></p>
 
-<h2>All Posts</h2>
+<div class="container-fluid">
+<h1>All Stories</h1>
 
-
-
+<%= image_tag("allstoriesimg.jpg", :class => "img img-responsive") %>
+</div>
 <div class="container">
   
    <% @posts.each do |post| %>
   <div class="col-md-4">
 
-    <h3><%= post.title %></h3>
+    <h4><%= post.title %></h4>
 
     <p class="datestyle"><%= post.date.strftime("%d %b %Y")  %></p>
     
@@ -38,9 +39,9 @@
       <i class="fa fa-ticket" aria-hidden="true"></i>
     <% end %>
 
-    <p><%= post.text.truncate(100) %><%= link_to '(more)', post%></p>
+    <p class="text-muted"><%= post.text.truncate(100) %><%= link_to '(more)', post%></p>
     
-      
+    <hr class="primary">   
 </div>  
 <% end %>
 

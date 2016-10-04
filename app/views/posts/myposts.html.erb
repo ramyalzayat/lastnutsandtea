@@ -1,14 +1,14 @@
-<div class="maincontant text-center">
+<div class="maincontant text-center"><br>
 
 <link href="/posts.scss" rel="stylesheet">
 <p id="notice"><%= notice %></p>
 
-<h2>My Posts</h2>
-
+<h1>My Stories</h1><br>
+<%= image_tag("books.jpg", :class => "img img-responsive") %><br>
 <div class="container">
    <% @myposts.each do |post| %>
   <div class="col-sm-3">
-    <h3><%= post.title %></h3>
+    <h4><%= post.title %></h4>
 
     <p class="datestyle"><%= post.date.strftime("%d %b %Y")  %></p>
     
@@ -34,9 +34,9 @@
       <i class="fa fa-ticket" aria-hidden="true"></i>
     <% end %>
 
-    <p><%= post.text.truncate(100) %><%= link_to '(more)', post%></p>
+    <p class="text-muted"><%= post.text.truncate(100) %><%= link_to '(more)', post%></p>
     
-    
+    <hr class="primary">
     <%= link_to 'Edit', edit_post_path(post),:class=>"btn btn-warning"   %>
     
   </div>
