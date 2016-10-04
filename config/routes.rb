@@ -1,7 +1,5 @@
-
-
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations' }
   resources :profils
   resources :posts
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'

@@ -7,6 +7,18 @@
   <%= @post.title %>
 </h3>
 
+<!-- cancan 
+-->
+<p>
+  <% if can? :update, @post %>
+    <%= link_to "Edit", edit_post_path(@post) %> |
+  <% end %>
+  <% if can? :destroy, @post %>
+    <%= link_to "Destroy", @post, :method => :delete, :confirm => "Are you sure?" %> |
+  <% end %>
+  <%= link_to "Back to Posts", posts_path %>
+</p>
+
 <!-- <p>
   <strong>Location:</strong>
   <%= @post.location %>

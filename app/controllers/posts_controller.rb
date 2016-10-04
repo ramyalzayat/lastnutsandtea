@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource 
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -19,6 +20,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    unauthorized! if cannot? :ubdate, @post
   end
 
   # POST /posts
