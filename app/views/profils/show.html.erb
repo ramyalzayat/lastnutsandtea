@@ -7,16 +7,16 @@
         <div class="profile-sidebar solid">
           <!-- SIDEBAR USERPIC -->
           <div class="profile-userpic">
-          
+
             <%= image_tag @profil.image_url(:thumb).to_s, class:"thumbnail" %>
-          
+
           </div>
           <!-- END SIDEBAR USERPIC -->
           <!-- SIDEBAR USER TITLE -->
           <div class="profile-usertitle">
             <div class="profile-usertitle-name">
-              
-              
+
+
               <%= @profil.first_name %>
               <%= @profil.last_name %><br>
               
@@ -24,13 +24,13 @@
               <%= @profil.gender %>
             </div>
             <div class="profile-usertitle-job">
-              <strong>City of origin:</strong>
+              <strong>City of Origin:</strong>
               <%= @profil.city_of_origin %><br>
-              <strong>Current location:</strong>
+              <strong>Current Location:</strong>
               <%= @profil.current_location %><br>
-               <strong>Date of Birth:</strong>
-                <%= @profil.dob.strftime("%d-%b-%Y")%><br>
-              <strong>Asylum status:</strong>
+              <strong>Date of Birth:</strong>
+              <%= @profil.dob.strftime("%d %b %Y")%><br>
+              <strong>Asylum Status:</strong>
               <%= @profil.asylum_status %>
               
 
@@ -40,79 +40,154 @@
           <!-- SIDEBAR BUTTONS -->
           <div class="profile-userbuttons">
             <button type="button" class="btn btn-success btn-sm"><%= link_to 'Edit My Profile', edit_profil_path(@profil), :class =>"editmypro" %></button>
-            
-          </div>
-          <!-- END SIDEBAR BUTTONS -->
-          <!-- SIDEBAR MENU -->
-          <div class="profile-usermenu">
+            <a href="mailto:<%= @profil.email %>"><button type="button" class="btn btn-danger btn-sm"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+             Message</button></a>
+
+           </div>
+           <!-- END SIDEBAR BUTTONS -->
+           <!-- SIDEBAR MENU -->
+           <div class="profile-usermenu">
             <ul class="nav">
               <li class="active">
-                <a href="#">
+                
+
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <i class="glyphicon glyphicon-home"></i>
                   Overview </a>
+
                 </li>
+                <li>
+                  
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="fa fa-book" aria-hidden="true"></i> My Stories
+                  </a>                                          
+                </li>
+
                 <li>
                   <a href="/users/edit">
                     <i class="glyphicon glyphicon-user"></i>
                     Account Settings </a>
                   </li>
-                  <li>
-                    <a href="/posts/myposts/">
-                      <i class="fa fa-book" aria-hidden="true"></i>
-
-                      My Stories </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="glyphicon glyphicon-flag"></i>
-                        Help </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- END MENU -->
-                </div>
-              </div>
-              <div class="col-md-9">
-                <div class="profile-content solid">
-                  <p class="text-muted">
-                    <strong>Bio:</strong>
-                    <%= @profil.bio %>
-                  </p><br><br><br><br>
-                  <strong>Email<strong>
-                  <a href="mailto:<%= @profil.email %>" target="_top"><%= @profil.email %></a><br>
-
-                  <% unless @profil.facebook.blank? %> 
-                  <strong>Facebook:</strong>
-                  <a href="<%= @profil.facebook %>" target="_blank">Facebook Profile</a><br>
-                  <% end %>
                   
-                  <% unless @profil.twitter.blank? %>
-                  <strong>Twitter:</strong>
-                  <a href="<%= @profil.twitter %>" target="_blank">twitter</a><br>
-                  <% end %>
-
-                  <% unless @profil.linkedin.blank? %>
-                  <strong>Linkedin:</strong>
-                  <a href="<%= @profil.linkedin %>" target="_blank">linkedin Profile</a><br>
-                  <% end %>
-
-                  <% unless @profil.instagram.blank? %>
-                  <strong>Instagram:</strong>
-                  <%= @profil.instagram %>
-                  <% end %>
 
 
 
-
-
-
-
-
+                  <li>
+                    <a href="#">
+                      <i class="glyphicon glyphicon-flag"></i>
+                      Help </a>
+                    </li>
+                  </ul>
                 </div>
+                <!-- END MENU -->
               </div>
             </div>
+            <div class="col-md-9">
+              <div class="profile-content solid">
+              <div id="accordion" role="tablist" aria-multiselectable="true">
+              
+             
+              <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+      </h4>
+    </div>
+    
+
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <strong>Bio:</strong>
+                  <%= @profil.bio %>
+
+                 <div class="socialmediaicons">
+                <% unless @profil.facebook.blank? %> 
+
+                <a href="<%= @profil.facebook %>" target="_blank"><i class="fbcolor fa fa-4x fa-facebook-square" aria-hidden="true"></i>
+                </a><br>
+                <% end %>
+
+                <% unless @profil.twitter.blank? %>
+                <a href="<%= @profil.twitter %>" target="_blank"><i class="twcolor fa fa-4x fa-twitter-square" aria-hidden="true"></i>
+                </a><br>
+                <% end %>
+
+                <% unless @profil.linkedin.blank? %>
+                <a href="<%= @profil.linkedin %>" target="_blank"><i class="fa fa-4x fa-linkedin-square" aria-hidden="true"></i>
+                </a><br>
+                <% end %>
+
+                <% unless @profil.instagram.blank? %>
+                <a href="http://www.instagram.com/<%= @profil.instagram %>" target="_blank"><i class="incolor fa fa-4x fa-instagram" aria-hidden="true"></i></a>
+                <% end %>
+              </div>
+
+                </div>
+                </div>
+
+                
+                <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="row">
+                   <% @myposts.each do |post| %>
+                   <div class="col-sm-3 text-center">
+
+
+                     <h4><%= post.title %></h4>
+
+                     <p class="datestyle"><%= post.date.strftime("%d %b %Y")  %></p>
+
+                     <% if post.privacy %>
+                     <i class="fa fa-lock" aria-hidden="true"></i>
+                     <% end %>
+                     <% if post.bus %>
+                     <i class="fa fa-bus" aria-hidden="true"></i>
+                     <% end %>
+                     <% if post.car %>
+                     <i class="fa fa-car" aria-hidden="true"></i>
+                     <% end %>
+                     <% if post.boat %>
+                     <i class="fa fa-life-ring" aria-hidden="true"></i>
+                     <% end %>
+                     <% if post.plane %>
+                     <i class="fa fa-plane" aria-hidden="true"></i>
+                     <% end %>
+                     <% if post.walking %>
+                     <i class="fa fa-male" aria-hidden="true"></i>
+                     <% end %>
+                     <% if post.train %>
+                     <i class="fa fa-ticket" aria-hidden="true"></i>
+                     <% end %>
+
+                     <p class="text-muted"><%= post.text.truncate(50) %><%= link_to '(more)', post%></p>
+
+                     <hr class="primary">
+                     <%= link_to 'Edit', edit_post_path(post),:class=>"btn btn-warning"   %>
+
+
+                   </div>
+                   <% end %>
+                 </div>
+               </div>
+              </div>
+              </div>
+
+
+              
+
+
+
+
+
+
+
+            </div>
           </div>
-          <center>
+        </div>
+      </div>
+      <center>
 
 
 
@@ -120,6 +195,6 @@
 
 
 
-          </div>
+      </div>
 
 

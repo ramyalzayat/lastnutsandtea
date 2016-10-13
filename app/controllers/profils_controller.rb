@@ -10,6 +10,7 @@ class ProfilsController < ApplicationController
   # GET /profils/1
   # GET /profils/1.json
   def show
+     @myposts = current_user.posts
   end
 
   # GET /profils/new

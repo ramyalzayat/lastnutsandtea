@@ -3,6 +3,34 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.panel-default {
+  border: none!important;
+}
+
+.panel-heading {
+  display: none;
+}
+
+
+.socialmediaicons {
+  position: absolute;
+  bottom: 10px;
+}
+
+
+.fbcolor {
+  color: #3b5998;
+}
+.twcolor {
+  color: #4099FF;
+} 
+.incolor {
+  color: #9b6954;
+}
+
+
+
+
 
 .profile {
     margin: -40px 0!important;
@@ -16,9 +44,13 @@
 }
 
 .solid {
+  border: 5px 
+  outset #F05F40 !important;
   border-style: solid;
   border-width: 1px;
   margin: -6px;
+  border-radius: 10px;
+
 }
 
 
@@ -74,7 +106,6 @@ label {
 }
 
 .profile-usertitle-job {
-  text-transform: uppercase;
   color: #5b9bd1;
   font-size: 12px;
   font-weight: 600;
@@ -141,6 +172,6 @@ label {
 .profile-content {
   padding: 20px;
   background: #fff;
-  min-height: 565px;
+  min-height: 600px;
 
 }
