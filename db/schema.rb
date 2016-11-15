@@ -16,20 +16,6 @@ ActiveRecord::Schema.define(version: 20160927185851) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bootsy_image_galleries", force: :cascade do |t|
-    t.integer  "bootsy_resource_id"
-    t.string   "bootsy_resource_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "bootsy_images", force: :cascade do |t|
-    t.string   "image_file"
-    t.integer  "image_gallery_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.integer  "location"
@@ -67,15 +53,6 @@ ActiveRecord::Schema.define(version: 20160927185851) do
     t.datetime "updated_at",       null: false
     t.integer  "user_id"
     t.string   "image"
-  end
-
-  create_table "story_models", force: :cascade do |t|
-    t.string   "title"
-    t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "name"
-    t.string   "email"
   end
 
   create_table "users", force: :cascade do |t|
